@@ -1,0 +1,60 @@
+:root {
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #888;
+}
+
+.button {
+    font-size:1.4em;
+    background-color: var(--bg-button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+  }
+  .button:hover{
+    background-color: #ccc;
+    outline: 0;
+  }
+
+  .button {
+    border-color: #ccc;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+  }
+  .button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: rgb(155, 155, 155);
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+  }
+  .button:hover {
+    color: #fff;
+  }
+  .button:hover:after {
+    width: 110%;
+  }
+
+.button.double{
+    grid-column: span 2;
+}
+
+.button.triple{
+      grid-column: span 3;
+}
+
+.button.operation{
+  background-color: #C8C8C8
+}
